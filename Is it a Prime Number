@@ -1,0 +1,19 @@
+number=int(input('Please enter your number: ')) # take the number
+# initialize the parameters
+divider=2 # start to divide from 2 because if a number can be divided by 2 it is not a prime number
+remainder=0
+is_prime = True 
+
+while divider<number: # do code as long as the divider smaller than the number   
+    remainder = number%divider # calculate the remainder 
+         
+    if remainder==0: # if the remainder is equal to zero, it means that the number can be divided by the divider
+        is_prime=False # then the number is not prime
+        break #break the loop and go to the end 
+    divider+=1 # else increase the divider by 1
+
+#print the results
+if is_prime:
+    print('The number is a prime number')
+else:
+    print('The number is not a prime number')
