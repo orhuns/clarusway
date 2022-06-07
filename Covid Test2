@@ -1,0 +1,14 @@
+def str2bool(word):
+  return word.lower() in ("true", 't', 'yes', 'y')
+
+cigarette = str(input('Do you smoke: true/false '))
+age = str(input('I am older than 75: true/false '))
+severe = str(input('I have heavy chronic illness: true/false '))
+immune = str(input('Is your immune system is not good: true/false '))
+
+risk = ((str2bool(cigarette) and str2bool(age) and str2bool(immune)) or (str2bool(severe) and str2bool(immune)))
+
+if risk:
+  print('You are in the risk group')
+else:
+  print('You are not in the risk group')
