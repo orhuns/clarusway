@@ -1,0 +1,9 @@
+max_n = 100
+x = [1,1]
+
+for i in range(1,max_n):
+    if x[i]+x[i-1] <= max_n:
+        x.append(x[i]+x[i-1])
+    else:break
+
+print(x)
