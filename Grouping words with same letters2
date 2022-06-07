@@ -1,0 +1,39 @@
+strs = ["eat", "tea", "tan", "ate", "nat", "bat", "cat", "tac"]
+print(len(strs))
+i=0
+j=1
+newset=set()
+found=set()
+newdict={}
+
+while i<len(strs):   
+    
+     
+    newset.add(strs[i]) 
+    found.add(strs[i])
+    item=set(strs[i])
+        
+    while j<len(strs):
+        element=set(strs[j])
+        
+        if item==element:
+            newset.add(strs[j])
+            found.add(strs[j])
+        j+=1
+        
+    
+        
+    newdict[i]=newset
+    newset=set()
+
+    i+=1
+    j=1
+
+    el_in_set = strs[i] in found
+    while el_in_set :
+        i+=1
+        if i==len(strs):
+            break
+        el_in_set = strs[i] in found
+        
+print(newdict)
