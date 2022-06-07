@@ -1,0 +1,15 @@
+while True:
+    n = input("-->")
+
+    if n.isnumeric():
+        n = int(n)
+        nums = list(str(n))
+
+        total = 0
+        for i in nums:
+            total += int(i)**len(nums)
+
+        print(f"{n} is an Armstrong number" if total == n else f"{n} is not an Armstrong number")
+        break
+    else:
+        print("number must be integer and positive")
