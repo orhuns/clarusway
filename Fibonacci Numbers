@@ -1,0 +1,16 @@
+# initiliaze the variables 
+
+prev_num=0 #previous number is equal to 0
+current_num=1 #current number is equal to 1
+
+fibonacci_list=[1,] #create our list
+
+while current_num<55:   # do while, the last number is lower than 55
+     
+    next_num=prev_num+current_num #next number is the sum ofthe  previous number and the current number  
+    fibonacci_list.append(next_num) # add this new number to the list
+    
+    prev_num=current_num # now the current number is equal to the previous number  
+    current_num=next_num # now the current number is equal to our next number 
+    
+print(fibonacci_list)
