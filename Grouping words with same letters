@@ -1,0 +1,22 @@
+strs = ["eat", "tea", "tan", "ate", "nat", "bat", "cat", "tac"]
+
+i=0
+newset=set()
+newdict={}
+
+for elements in strs:
+    newset.add(elements)    
+    
+    for items in strs:
+        if set(elements)==set(items):
+            newset.add(items)
+                        
+    for elm in newset:
+        strs.remove(elm)
+        
+    newdict[i]=newset
+    newset=set()
+            
+    i+=1
+
+print(newdict.values())
