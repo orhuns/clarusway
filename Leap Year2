@@ -1,0 +1,15 @@
+year = int(input("-->"))
+def is_leap(year):
+    stage = 0
+    if year % 4 == 0:
+        stage += 1
+        if year % 100 != 0:
+            print (True)
+            _ += 1
+        if (year / 100) % 4 == 0:
+            print(True)
+            stage += 1
+    if _ == 0 or _ == 1:
+        print(False)
+
+is_leap(year)
