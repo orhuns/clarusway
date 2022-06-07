@@ -1,0 +1,25 @@
+number=(input('Please enter your number: '))
+
+while not number.isnumeric():
+  number=(input('It is an invalid entry. Do not use non-numeric, float, or negative values! Please enter your number: '))
+
+number=int(number)
+number_list=list(str(number))
+
+total=0
+i=1
+is_armstrong=False
+while total<number:
+    
+    total=0
+    for numbers in number_list:
+        total= pow(int(numbers), i)+total
+          
+    if total==number:
+        is_armstrong= True
+    
+    i+=1
+if is_armstrong :
+  print('{} is an armstrong number'.format(number))
+else: 
+  print('{} is not an armstrong number'.format(number))
