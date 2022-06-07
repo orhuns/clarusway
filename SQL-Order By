@@ -1,0 +1,25 @@
+SELECT InvoiceId, CustomerId , total
+
+FROM invoices ORDER By CustomerId ASC, total DESC;
+
+SELECT InvoiceId, CustomerId , total
+
+FROM invoices ORDER By total DESC, CustomerId ASC;
+
+SELECT *
+
+FROM invoices  WHERE total>=10 LIMIT 10;
+
+SELECT *
+
+FROM invoices  WHERE total<10 LIMIT 5;
+
+SELECT *
+
+FROM tracks WHERE name like 'B%s';
+
+SELECT *
+
+FROM invoices  WHERE (BillingCountry = 'USA' or BillingCountry = 'Germany' or BillingCountry = 'Norway' or BillingCountry = 'Canada') AND InvoiceDate like '2010%'
+
+ORDER By InvoiceDate ASC;
