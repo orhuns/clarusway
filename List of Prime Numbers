@@ -1,0 +1,24 @@
+number=int(input('Please enter an integer number: ')) # take the number
+# initialize the parameters
+
+next_number=2
+divider=2 # start to divide from 2 because if a number can be divided by 2 it is not a prime number
+is_prime = True
+newlist=[]
+
+while next_number<=number: # control if the next number is still smaller than the number user entered
+    is_prime = True # again initialize the parameters every time
+    divider=2
+    while divider<next_number: # do code as long as the divider smaller than the number   
+        remainder = next_number%divider # calculate the remainder 
+        if remainder==0: # if the remainder is equal to zero, it means that the number can be divided by the divider
+            is_prime=False # then the number is not prime
+            break #break the loop and go to the end 
+        divider +=1 # else increase the divider by 1
+    
+    if is_prime: # if the number is prime, add it to the list
+        newlist.append(next_number) 
+    next_number+=1 # control the next number
+        
+#print the results
+print(newlist)
