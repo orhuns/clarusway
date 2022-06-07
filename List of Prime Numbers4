@@ -1,0 +1,15 @@
+x = int(input("sayıyı giriniz"))
+
+prime_numbers = []
+
+def a(s):
+    t = 0
+    for i in range(2,s):
+        if s % i == 0:
+            t = 1
+    if t == 0:
+        prime_numbers.append(s)
+for i in range(2,x+1):
+    a(i)
+
+print(prime_numbers)
