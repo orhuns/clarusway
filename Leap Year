@@ -1,0 +1,6 @@
+year = int(input())
+remaining_4 = year % 4
+remaining_100 = year % 100 
+remaining_400 = year % 400 
+leap_year = (remaining_4 and not remaining_100) or remaining_400 ) 
+print(leap_year)
