@@ -1,0 +1,36 @@
+righthand = list('yuiophjklnm') # take the letters for the righthand to a list
+lefthand= list('qwertasdfgzxcvb') # take the letters for the lefthand to another list
+word=input(print('enter the word')) # take the word fron the user
+my_word= list(word) # convert the word into a list
+rh_boolean= False # define a boolean for being rigthhand side
+lh_boolean= False # define a boolean for being lefthhand side
+rh_boolean= righthand[0] in my_word or rh_boolean # search all the rigth hand letters in the word. If there is one make the boolean true 
+rh_boolean= righthand[1] in my_word or rh_boolean # It was also possbile to search the letters of the user word in the rightand and lefthand lists. 
+rh_boolean= righthand[2] in my_word or rh_boolean # But this would require if statement. Because we do not now the lenght of the lıst.
+rh_boolean= righthand[3] in my_word or rh_boolean
+rh_boolean= righthand[4] in my_word or rh_boolean
+rh_boolean= righthand[5] in my_word or rh_boolean
+rh_boolean= righthand[6] in my_word or rh_boolean
+rh_boolean= righthand[7] in my_word or rh_boolean
+rh_boolean= righthand[8] in my_word or rh_boolean
+rh_boolean= righthand[9] in my_word or rh_boolean
+rh_boolean= righthand[10] in my_word or rh_boolean
+
+lh_boolean= lefthand[0] in my_word  or lh_boolean # search all the left hand letters in the word. If there is one make the boolean true
+lh_boolean= lefthand[1] in my_word  or lh_boolean
+lh_boolean= lefthand[2] in my_word or lh_boolean
+lh_boolean= lefthand[3] in my_word or lh_boolean
+lh_boolean= lefthand[4] in my_word or lh_boolean
+lh_boolean= lefthand[5] in my_word or lh_boolean
+lh_boolean= lefthand[6] in my_word or lh_boolean
+lh_boolean= lefthand[7] in my_word or lh_boolean
+lh_boolean= lefthand[8] in my_word or lh_boolean
+lh_boolean= lefthand[9] in my_word or lh_boolean
+lh_boolean= lefthand[10] in my_word or lh_boolean
+lh_boolean= lefthand[11] in my_word or lh_boolean
+lh_boolean= lefthand[12] in my_word or lh_boolean
+lh_boolean= lefthand[13] in my_word or lh_boolean
+lh_boolean= lefthand[14] in my_word or lh_boolean
+
+print('The word is righthand:', rh_boolean) # print the booleans
+print('The word is lefthand:', lh_boolean)
