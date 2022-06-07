@@ -1,0 +1,12 @@
+w = int(input())
+h = float(input())
+BMI = w//h**2
+if BMI < 18.5:
+    x = "Underweight"
+elif BMI >=18.5 and BMI<25:
+    x="Normal"
+elif BMI>=25 and BMI<30:
+    x="Overwight"
+else:
+    x="Obesity"
+print(x)
