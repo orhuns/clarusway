@@ -1,0 +1,23 @@
+SELECT AlbumId, count(TrackId)
+FROM tracks
+GROUP by AlbumId
+ORDER by count(TrackId) ASC ;
+
+SELECT tracks.Name, albums.Title
+FROM tracks INNER join albums on tracks.AlbumId=albums.AlbumId ;
+
+SELECT albums.AlbumId, Title, tracks.Name, tracks.Milliseconds
+FROM albums INNER join tracks on tracks.AlbumId=albums.AlbumId
+GROUP by Title
+ORDER by tracks.Milliseconds;
+
+SELECT albums.AlbumId, Title, tracks.Name, sum(tracks.Milliseconds)
+FROM albums INNER join tracks on tracks.AlbumId=albums.AlbumId
+GROUP by Title
+ORDER by sum(tracks.Milliseconds) ;
+
+SELECT albums.AlbumId, Title, sum(tracks.Milliseconds)
+FROM albums INNER join tracks on tracks.AlbumId=albums.AlbumId
+GROUP by Title
+HAVING sum(tracks.Milliseconds)>70*60*1000
+ORDER by sum(tracks.Milliseconds) ;
