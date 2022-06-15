@@ -1,0 +1,32 @@
+fdate = '01.05.2001' #str(input("Enter the first date"))
+sdate= '02.02.2003' #str(input("Enter the second date"))
+months = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+
+def year(date):
+    return int(date[6:])
+def month(date):
+    return int(date[3:5])
+def day(date):
+    return int(date[0:2])
+
+year_diff= year(sdate)-year(fdate)
+month_diff=month(sdate)-month(fdate)
+day_diff=day(sdate)-day(fdate)
+
+days=0
+i=0
+if month_diff>0:
+    
+    while i<(month_diff):
+        days=months[month(fdate)-i-1]+days
+        i+=1
+else:    
+    while i<abs(month_diff):
+        days=months[month(sdate)-i-1]+days
+        i+=1
+    days=days*-1+1
+
+
+days=year_diff*365+day_diff+days
+
+print(days)
