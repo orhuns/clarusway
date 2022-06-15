@@ -1,0 +1,11 @@
+sentence=str(input('Please enter the sentence:')) # take the sentence from the user
+
+dict={} # create an empty dictionary
+
+for letter in sentence: # for each letter in the sentence
+    
+    if letter in dict: # if the letter is already in the dictionary
+        dict[letter]+=1 # increase its value by one
+    else: dict[letter]=1 # else create a new value in the dictionary for that letter 
+
+print(dict) # print the dictionary
